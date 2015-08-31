@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6244" systemVersion="13E28" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14F27" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Engine" syncable="YES">
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="installedIn" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Ship" inverseName="hasInstalled" inverseEntity="Ship" syncable="YES"/>
+    </entity>
+    <entity name="Pirate" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="owns" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ship" inverseName="owner" inverseEntity="Ship" syncable="YES"/>
+    </entity>
+    <entity name="Ship" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hasInstalled" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Engine" inverseName="installedIn" inverseEntity="Engine" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pirate" inverseName="owns" inverseEntity="Pirate" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Pirate" positionX="-36" positionY="9" width="128" height="75"/>
+        <element name="Ship" positionX="0" positionY="45" width="128" height="90"/>
+        <element name="Engine" positionX="27" positionY="72" width="128" height="75"/>
+    </elements>
 </model>

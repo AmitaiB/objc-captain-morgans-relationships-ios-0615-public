@@ -438,6 +438,7 @@
 				318F5F8919F7F51800ADA305 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		318F5F8A19F7F51800ADA305 /* Build configuration list for PBXNativeTarget "objc-Captain-Morgans-RelationshipsTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +447,7 @@
 				318F5F8C19F7F51800ADA305 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
