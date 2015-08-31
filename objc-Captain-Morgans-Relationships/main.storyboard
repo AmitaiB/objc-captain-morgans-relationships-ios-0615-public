@@ -133,7 +133,7 @@
         <!--Ships-->
         <scene sceneID="1yf-z7-Z2R">
             <objects>
-                <tableViewController id="0ea-RU-79e" sceneMemberID="viewController">
+                <tableViewController id="0ea-RU-79e" customClass="FISShipsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kHg-QF-YXj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

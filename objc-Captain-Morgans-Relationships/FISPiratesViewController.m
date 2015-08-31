@@ -7,6 +7,7 @@
 //
 
 #import "FISPiratesViewController.h"
+#import "FISShipsViewController.h"
 #import "Pirate.h"
 
 
@@ -74,6 +75,7 @@
     return cell;
 }
 
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -113,16 +115,20 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    FISShipsViewController *destinationVC = segue.destinationViewController;
+    destinationVC.selectedPirate = self.sharedStore.pirates[indexPath.row];
+    
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
 
- */
+
 
 @end
