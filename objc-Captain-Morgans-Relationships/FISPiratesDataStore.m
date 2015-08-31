@@ -87,10 +87,13 @@ static NSString * const engine = @"Engine";
     NSManagedObjectContext *moc = self.managedObjectContext;
     
     Pirate *atomsk = [self makePirate:@"Atomsk"];
-    Ship *Nota
+    
+    Ship *naota = [self makeShip:@"Naota Nandaba's head" withOwner:atomsk];
+    Engine *mrNaota = [self makeEngineOfType:@"N.O. Channel" forShip:naota];
     
 //    =============
     Pirate *balthier = [self makePirate:@"Balthier"];
+    
     Ship *strahl = [self makeShip:@"Strahl" withOwner:balthier];
     Engine *airStrahl = [self makeEngineOfType:@"Airship" forShip:strahl];
 
@@ -127,7 +130,7 @@ static NSString * const engine = @"Engine";
     // TODO: make an NSFetchRequest, execute and fill datastore
     
     // TODO: finish this so it will generate test data if your datastore is empty
-    if (<#yourStorageArrayProperty#>.count == 0) {
+    if (self.pirates.count == 0) {
         [self generateTestData];
     }
 }
