@@ -7,9 +7,16 @@
 //
 
 #import "FISPiratesDataStore.h"
+#import "Pirate.h"
+#import "Ship.h"
+#import "Engine.h"
 
 @implementation FISPiratesDataStore
 @synthesize managedObjectContext = _managedObjectContext;
+
+static NSString * const pirate = @"Pirate";
+static NSString * const ship   = @"Ship";
+static NSString * const engine = @"Engine";
 
 # pragma mark - Singleton
 
@@ -77,6 +84,38 @@
 -(void) generateTestData
 {
     // TODO: create test data
+    NSManagedObjectContext *moc = self.managedObjectContext;
+    
+    Pirate *atomsk = [self makePirate:@"Atomsk"];
+    Ship *Nota
+    
+//    =============
+    Pirate *balthier = [self makePirate:@"Balthier"];
+    Ship *strahl = [self makeShip:@"Strahl" withOwner:balthier];
+    Engine *airStrahl = [self makeEngineOfType:@"Airship" forShip:strahl];
+
+    
+//    =============
+    Pirate *kidd = [self makePirate:@"William Kidd"];
+    
+    Ship *galley = [self makeShip:@"Adventure Galley" withOwner:kidd];
+    Engine *merchantGalley = [self makeEngineOfType:@"Merchant" forShip:galley];
+    
+    Ship *revenge = [self makeShip:@"New York Revenge" withOwner:kidd];
+    Engine *ukRevenge = [self makeEngineOfType:@"unknown" forShip:revenge];
+    
+//    =============
+    Pirate *roberts = [self makePirate:@"Bartholomew Roberts"];
+    
+    Ship *fortune = [self makeShip:@"Good Fortune" withOwner:roberts];
+    Engine *ukFortune = [self makeEngineOfType:@"unknown" forShip:fortune];
+    
+    Ship *ranger = [self makeShip:@"Little Ranger" withOwner:roberts];
+    Engine *sloopRanger = [self makeEngineOfType:@"Sloop" forShip:ranger];
+    
+    Ship *seaKing = [self makeShip:@"Sea King" withOwner:roberts];
+    Engine *brigKing = [self makeEngineOfType:@"Brigantine" forShip:seaKing];
+    
     
     // save and refetch
     [self saveContext];
@@ -93,5 +132,24 @@
     }
 }
 
+-(Pirate*)makePirate:(NSString*)name {
+    Pirate *temp = [NSEntityDescription insertNewObjectForEntityForName:pirate inManagedObjectContext:self.managedObjectContext];
+    temp.name = name;
+    return temp;
+}
+
+-(Ship*)makeShip:(NSString*)shipName withOwner:(Pirate*)owner {
+    Ship *temp = [NSEntityDescription insertNewObjectForEntityForName:ship inManagedObjectContext:self.managedObjectContext];
+    temp.name = shipName;
+    temp.owner = owner;
+    return temp;
+}
+
+-(Engine*)makeEngineOfType:(NSString*)type forShip:(Ship*)ship {
+    Engine *temp = [NSEntityDescription insertNewObjectForEntityForName:engine inManagedObjectContext:self.managedObjectContext];
+    temp.type = type;
+    temp.installedIn = ship;
+    return temp;
+}
 
 @end

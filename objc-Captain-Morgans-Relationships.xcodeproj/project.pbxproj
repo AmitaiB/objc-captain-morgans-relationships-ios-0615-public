@@ -21,6 +21,9 @@
 		318F5FA119F7F64200ADA305 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318F5FA019F7F64200ADA305 /* Foundation.framework */; };
 		318F5FA319F7F64900ADA305 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318F5FA219F7F64900ADA305 /* UIKit.framework */; };
 		318F5FA519F7F65200ADA305 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318F5FA419F7F65200ADA305 /* CoreGraphics.framework */; };
+		38FE81CE1B94977500452B98 /* Ship.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FE81CD1B94977500452B98 /* Ship.m */; };
+		38FE81D11B94977600452B98 /* Pirate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FE81D01B94977600452B98 /* Pirate.m */; };
+		38FE81D41B94977600452B98 /* Engine.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FE81D31B94977600452B98 /* Engine.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,12 @@
 		318F5FA019F7F64200ADA305 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		318F5FA219F7F64900ADA305 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		318F5FA419F7F65200ADA305 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		38FE81CC1B94977500452B98 /* Ship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ship.h; path = "objc-Captain-Morgans-Relationships/DataModelObjects/Ship.h"; sourceTree = "<group>"; };
+		38FE81CD1B94977500452B98 /* Ship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Ship.m; path = "objc-Captain-Morgans-Relationships/DataModelObjects/Ship.m"; sourceTree = "<group>"; };
+		38FE81CF1B94977600452B98 /* Pirate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pirate.h; path = "objc-Captain-Morgans-Relationships/DataModelObjects/Pirate.h"; sourceTree = "<group>"; };
+		38FE81D01B94977600452B98 /* Pirate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Pirate.m; path = "objc-Captain-Morgans-Relationships/DataModelObjects/Pirate.m"; sourceTree = "<group>"; };
+		38FE81D21B94977600452B98 /* Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Engine.h; path = "objc-Captain-Morgans-Relationships/DataModelObjects/Engine.h"; sourceTree = "<group>"; };
+		38FE81D31B94977600452B98 /* Engine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Engine.m; path = "objc-Captain-Morgans-Relationships/DataModelObjects/Engine.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +111,8 @@
 		318F5F6619F7F51800ADA305 /* objc-Captain-Morgans-Relationships */ = {
 			isa = PBXGroup;
 			children = (
+				38FE81D51B94978600452B98 /* Data Model Objects */,
+				318F5F9B19F7F5CF00ADA305 /* objcCMR.xcdatamodeld */,
 				318F5F6B19F7F51800ADA305 /* AppDelegate.h */,
 				318F5F6C19F7F51800ADA305 /* AppDelegate.m */,
 				318F5F9919F7F58600ADA305 /* main.storyboard */,
@@ -113,7 +124,6 @@
 				318F5F9219F7F56800ADA305 /* FISShipDetailViewController.m */,
 				318F5F9319F7F56800ADA305 /* FISPiratesDataStore.h */,
 				318F5F9419F7F56800ADA305 /* FISPiratesDataStore.m */,
-				318F5F9B19F7F5CF00ADA305 /* objcCMR.xcdatamodeld */,
 				318F5F7419F7F51800ADA305 /* Images.xcassets */,
 				318F5F7619F7F51800ADA305 /* LaunchScreen.xib */,
 				318F5F6719F7F51800ADA305 /* Supporting Files */,
@@ -148,6 +158,20 @@
 				318F5F8219F7F51800ADA305 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		38FE81D51B94978600452B98 /* Data Model Objects */ = {
+			isa = PBXGroup;
+			children = (
+				38FE81D21B94977600452B98 /* Engine.h */,
+				38FE81D31B94977600452B98 /* Engine.m */,
+				38FE81CF1B94977600452B98 /* Pirate.h */,
+				38FE81D01B94977600452B98 /* Pirate.m */,
+				38FE81CC1B94977500452B98 /* Ship.h */,
+				38FE81CD1B94977500452B98 /* Ship.m */,
+			);
+			name = "Data Model Objects";
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,8 +279,11 @@
 				318F5F6D19F7F51800ADA305 /* AppDelegate.m in Sources */,
 				318F5F9D19F7F5CF00ADA305 /* objcCMR.xcdatamodeld in Sources */,
 				318F5F9519F7F56800ADA305 /* FISPiratesViewController.m in Sources */,
+				38FE81CE1B94977500452B98 /* Ship.m in Sources */,
 				318F5F6A19F7F51800ADA305 /* main.m in Sources */,
 				318F5F9819F7F56800ADA305 /* FISPiratesDataStore.m in Sources */,
+				38FE81D11B94977600452B98 /* Pirate.m in Sources */,
+				38FE81D41B94977600452B98 /* Engine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
