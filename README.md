@@ -7,7 +7,7 @@ languages: objc
 
 ## Instructions
 
-  1. Open up Open-Me
+  1. Open up the Xcode project file.
   2. Create three entities. Pirate, Ship, Engine.
   3. Pirates have many ships, and a name.
   4. Ships have one Pirate and one Engine and a name.
