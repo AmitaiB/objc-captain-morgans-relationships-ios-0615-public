@@ -16,6 +16,8 @@
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
+-(void)fetchData;
+
 
 + (instancetype) sharedPiratesDataStore;
 
