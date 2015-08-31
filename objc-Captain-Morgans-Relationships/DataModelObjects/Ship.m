@@ -7,8 +7,6 @@
 //
 
 #import "Ship.h"
-#import "NSManagedObject.h"
-
 
 @implementation Ship
 

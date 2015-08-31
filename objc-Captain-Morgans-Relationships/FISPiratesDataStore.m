@@ -128,6 +128,12 @@ static NSString * const engine = @"Engine";
 - (void)fetchData
 {
     // TODO: make an NSFetchRequest, execute and fill datastore
+    NSFetchRequest *pirateRequest = [NSFetchRequest fetchRequestWithEntityName:pirate];
+    NSError *error = nil;
+    
+    NSSortDescriptor *alphabeticalSort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES selector:@selector(localizedStandardCompare:)];
+    pirateRequest.sortDescriptors = @[alphabeticalSort];
+    self.pirates = [self.managedObjectContext executeFetchRequest:pirateRequest error:&error];
     
     // TODO: finish this so it will generate test data if your datastore is empty
     if (self.pirates.count == 0) {

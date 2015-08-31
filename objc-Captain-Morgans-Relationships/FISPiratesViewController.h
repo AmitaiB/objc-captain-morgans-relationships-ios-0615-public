@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FISPiratesDataStore.h"
 
 @interface FISPiratesViewController : UITableViewController
+
+@property (nonatomic, strong) FISPiratesDataStore *sharedStore;
 
 @end

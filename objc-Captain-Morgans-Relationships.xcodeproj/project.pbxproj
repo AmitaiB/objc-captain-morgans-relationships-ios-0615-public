@@ -111,17 +111,12 @@
 		318F5F6619F7F51800ADA305 /* objc-Captain-Morgans-Relationships */ = {
 			isa = PBXGroup;
 			children = (
-				38FE81D51B94978600452B98 /* Data Model Objects */,
 				318F5F9B19F7F5CF00ADA305 /* objcCMR.xcdatamodeld */,
 				318F5F6B19F7F51800ADA305 /* AppDelegate.h */,
 				318F5F6C19F7F51800ADA305 /* AppDelegate.m */,
 				318F5F9919F7F58600ADA305 /* main.storyboard */,
-				318F5F8D19F7F56800ADA305 /* FISPiratesViewController.h */,
-				318F5F8E19F7F56800ADA305 /* FISPiratesViewController.m */,
-				318F5F8F19F7F56800ADA305 /* FISShipsViewController.h */,
-				318F5F9019F7F56800ADA305 /* FISShipsViewController.m */,
-				318F5F9119F7F56800ADA305 /* FISShipDetailViewController.h */,
-				318F5F9219F7F56800ADA305 /* FISShipDetailViewController.m */,
+				38FE81D61B94A5E700452B98 /* ViewControllers */,
+				38FE81D51B94978600452B98 /* Data Model Objects */,
 				318F5F9319F7F56800ADA305 /* FISPiratesDataStore.h */,
 				318F5F9419F7F56800ADA305 /* FISPiratesDataStore.m */,
 				318F5F7419F7F51800ADA305 /* Images.xcassets */,
@@ -172,6 +167,19 @@
 			);
 			name = "Data Model Objects";
 			path = ..;
+			sourceTree = "<group>";
+		};
+		38FE81D61B94A5E700452B98 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				318F5F8D19F7F56800ADA305 /* FISPiratesViewController.h */,
+				318F5F8E19F7F56800ADA305 /* FISPiratesViewController.m */,
+				318F5F8F19F7F56800ADA305 /* FISShipsViewController.h */,
+				318F5F9019F7F56800ADA305 /* FISShipsViewController.m */,
+				318F5F9119F7F56800ADA305 /* FISShipDetailViewController.h */,
+				318F5F9219F7F56800ADA305 /* FISShipDetailViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
